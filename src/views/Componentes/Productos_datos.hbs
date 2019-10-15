@@ -1,0 +1,39 @@
+{{#each productos }}
+<div class="col-md-4">
+    <div class="product-item">
+        <div class="product-thumb">
+            <span class="bage">Sale</span>
+            <img class="img-responsive" src="/images/Productos_img/{{ImgPro}}" alt="product-img" />
+            <div class="preview-meta">
+                <ul>
+                    <li>
+                        <span data-toggle="modal"  data-target="#exampleModalCenter" value="{{_id}}" class="productomodal"  >
+                            <i class="tf-ion-ios-search"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+                    </li>
+                    <li>
+                        <span class="cart_dato" value="{{_id}}"><i class="tf-ion-android-cart"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-content">
+            <h4><a href="#">{{ NombrePro }}</a></h4>
+            <p class="price">{{PrecioPro}}</p>
+        </div>
+    </div>
+</div>
+
+{{else}}
+<div class="card mx-auto">
+    <div class="card-body">
+        <p class="lead"> There are not note yet.</p>
+        <a href="/notes/add" class="btn btn-success btn-block">Create note</a>
+    </div>
+</div>
+{{!--  --}}
+{{!--  --}}
+{{/each}}

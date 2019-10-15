@@ -1,0 +1,89 @@
+<h3>FILTROS</h3>
+<hr>
+<div id="accordion">
+    <div class="accordion">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                        Precio
+                    </h3>
+                    <input class="form-control" type="number" placeholder="Min." name="precio1">
+                    <input class="form-control" type="number" placeholder="Max." name="precio1">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                        Marca
+                    </h3>
+                    <div class="filtros_stor">
+                        {{#each tipo}}
+                        <input class="form-check-input marca_producto" id="{{ this._id }}" name="checkboxx"
+                            type="checkbox" value="{{ this.Nombre_tipo }}">
+                        <label class="form-check-label lblCheckMarca"
+                            for="{{ this._id }}">{{ this.Nombre_tipo }}</label>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                        Género
+                    </h3>
+                    <div class="filtros_stor">
+                        {{#each tipo}}
+                        <input class="form-check-input marca_producto" id="{{ this._id }}" name="checkboxx"
+                            type="checkbox" value="{{ this.Nombre_tipo }}">
+                        <label class="form-check-label lblCheckMarca"
+                            for="{{ this._id }}">{{ this.Nombre_tipo  }}</label>
+                        {{/each }}
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                        Marca
+                    </h3>
+                    <div class="filtros_stor">
+                        {{#each marca}}
+                        <input class="form-check-input marca_producto" id="{{ this._id }}" name="checkboxx"
+                            type="checkbox" value="{{ this.Nombre_marca }}">
+                        <label class="form-check-label lblCheckMarca"
+                            for="{{ this._id }}">{{ this.Nombre_marca }}</label>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                        Categoria
+                    </h3>
+                    <div class="filtros_stor">
+                        {{#each categorias}}
+                        <input class="form-check-input marca_producto" id="{{this._id}}" name="checkboxx"
+                            type="checkbox" value="{{this.Nombre_categoria}}"> <label
+                            class="form-check-label lblCheckMarca" for="{{this._id}}">{{this.Nombre_categoria}}</label>
+                        {{/each}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

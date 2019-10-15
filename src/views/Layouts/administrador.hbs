@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador</title>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4f7cc9e928.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+    <link rel="stylesheet" href="/Iconos/style.css">
+    <script src="javascript/slider.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin_css.css">
+    <script type='text/javascript' src="/javascript/datos.js"></script>
+    <script type='text/javascript' src="/chat/chat.js"></script>
+</body style="overflow-y:hidden">
+
+<div style="background:#2b3d51">
+    <div class="container">
+        <main class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 menu_principal">
+            <footer>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 img_menu">
+                                <a href="index">
+                                    <img src="/Iconos/iconoo.png" />
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 lista_menu">
+                                <ul>
+                                    <li class="bikes_submenu1">Bicicletas <span class="icon-chevron-down"></span>
+                                        <ul>
+                                            <li>
+                                                <div class="row columna_padre">
+                                                    <div class="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 columnas">
+                                                        <ul>
+                                                            <li>
+                                                                <img src="img/imagen3.jpg" style="background: red"
+                                                                    alt="Alternate Text" />
+                                                                <hr />
+                                                            </li>
+                                                            <li>
+                                                                <p>Ruta</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Montaña</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Clásicas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Híbridas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Urbanas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>MBX</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>BMX</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 columnas">
+                                                        <ul>
+                                                            <li>
+                                                                <img src="img/imagen3.jpg" alt="Alternate Text" />
+                                                                <hr />
+                                                            </li>
+                                                            <li>
+                                                                <p>Ruta</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Montaña</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Clásicas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Híbridas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Urbanas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>MBX</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>BMX</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 columnas">
+                                                        <ul>
+                                                            <li>
+                                                                <img src="img/imagen3.jpg" alt="Alternate Text" />
+                                                                <hr />
+                                                            </li>
+                                                            <li>
+                                                                <p>Ruta</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Montaña</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Clásicas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Híbridas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Urbanas</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>MBX</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>BMX</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="bikes_submenu">Componentes de Ciclas <span class="icon-chevron-down"></span>
+                                        <ul>
+                                            <li>Llantas</li>
+                                            <li>Cadenas</li>
+                                            <li>Chasis</li>
+                                            <li>Sillín</li>
+                                            <li>Frenos</li>
+                                            <li>Pedales</li>
+                                            <li>Bielas</li>
+                                        </ul>
+                                    </li>
+                                    <li>Componentes y Accesorios</li>
+                                    <li>Ofertas</li>
+                                    {{!-- <li>Desconectar</li>  --}}
+                                    <li id="menu_lista"><label for="mene">
+                                            <span class="icon-list mene"></span>
+                                            <ul>
+                                                <li>Llantas</li>
+                                                <li>Cadenas</li>
+                                                <li>Chasis</li>
+                                                <li>Sillín</li>
+                                                <li>Frenos</li>
+                                                <li>Pedales</li>
+                                                <li>Bielas</li>
+                                            </ul>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+</div>
+{{> message }}
+{{> errores }}
+{{{  body  }}}
+<br>
+<footer id="footer_padre">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 footer_panel">
+                <div id="footer_redes" class="footer">
+                    <h2 class="titulos_footer">Redes Sociales</h2>
+                    <div>
+                        <a><span class="icon-facebook"></span></a>
+                        <a><span class="icon-youtube"></span></a><br>
+                        <a><span class="icon-twitter"></span></a>
+                        <a><span class="icon-instagram"></span></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 footer_panel">
+                <div class="footer_nosotros">
+                    <h2 class="titulos_footer">Acerca de Nosotros</h2>
+                    <ul>
+                        <li>Acerca de Nosotros</li>
+                        <li>Términos y condiciones</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 footer_panel">
+                <div class="footer_nosotros">
+                    <h2 class="titulos_footer">Nuestros Servicios</h2>
+                    <ul>
+                        <li>Mantenimiento y reparación</li>
+                        <li>Soporte</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+</html>

@@ -1,0 +1,10 @@
+<div class="input-group">
+    <select class="form-control" name="Categoria" id="exampleFormControlSelect1">
+        <option value="" disabled selected>Categoría</option>
+        {{#each all_marca}}
+        <option value="{{ this.Nombre_marca }}">{{ this.Nombre_marca }}</option>
+        {{/each}}
+    </select>
+    <span class="input-group-addon" style="cursor: pointer;" ID="add_marca"><i class="icon-plus">Agregar
+            Marca</i></span>
+</div>

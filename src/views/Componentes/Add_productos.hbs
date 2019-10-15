@@ -1,0 +1,253 @@
+
+<head>
+    <script src="/javascript/Loggin/categorias_view.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<section class="add_productos">
+    <div id="container_productos" class="container">
+        <div id="contenido_addproducto" class="row">
+            <form id="formulario_productos" enctype="multipart/form-data">
+                <div style="margin-right: 0px; margin-left: 0px;" class="row">
+                    <div style="height:auto; padding:1%;" class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Nombre" placeholder="Nombre Producto">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="money" min="0.00" name="precio"
+                                placeholder="Precio" step="500" />
+                        </div>
+                        <div class="form-group">
+                            <div class="put_tipo">
+                                <div class="input-group">
+                                    <select class="form-control" name="Tipo" id="exampleFormControlSelect1">
+                                        <option value="" disabled selected>Tipos</option>
+                                    </select>
+                                    <span class="input-group-addon" style="cursor: pointer;" ID="add_tipo"><i
+                                            class="icon-plus">Agregar Tipos</i></span>
+                                </div>
+                            </div>
+                            {{!--  <select class="form-control" name="Tipo" id="exampleFormControlSelect1">
+                                <option value="" disabled selected>Tipo</option>
+                                <option value="HOMBRE">Hombre</option>
+                                <option value="MUJER">Mujer</option>
+                            </select> --}}
+                        </div>
+                        <div class="form-group">
+                            <div id="put_categorias">
+                                <div class="input-group">
+                                    <select class="form-control" name="Categoria" id="exampleFormControlSelect1">
+                                        <option value="" disabled selected>Categorías</option>
+                                    </select>
+                                    <span class="input-group-addon" style="cursor: pointer;" ID="add_cate"><i
+                                            class="icon-plus">Agregar Categoría</i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="put_marcas">
+                                <div class="input-group">
+                                    <select class="form-control" name="Marca" id="exampleFormControlSelect1">
+                                        <option value="" disabled selected>Marcas</option>
+                                    </select>
+                                    <span class="input-group-addon" style="cursor: pointer;" ID="add_marca"><i
+                                            class="icon-plus">Agregar Marcas</i></span>
+                                </div>
+                            </div>
+                            {{!-- <select class="form-control" name="Marca" id="exampleFormControlSelect1">
+                                <option value="" disabled selected>Marca</option>
+                                <option value="CUSTER">CUSTER</option>
+                                <option value="ARTURO CALLE">ARTURO CALLE</option>
+                                <option value="NIKE">NIKE</option>
+                                <option value="DC">DC</option>
+                                <option value="CONVERSE">CONVERSE</option>
+                            </select> --}}
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" value="XS" />XS
+                                    <input type="number" placeholder="Cantidad de XS" id="XS" min="0"
+                                        class="form-control" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" value="S" />S
+                                    <input type="number" placeholder="Cantidad de S" id="S" min="0"
+                                        class="form-control" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" value="M" />M
+                                    <input type="number" placeholder="Cantidad de M" id="M" min="0"
+                                        class="form-control" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" value="L" />L
+                                    <input type="number" placeholder="Cantidad de L" id="L" min="0"
+                                        class="form-control" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" value="XL" />XL
+                                    <input type="number" placeholder="Cantidad de XL" id="XL" min="0"
+                                        class="form-control" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" value="XXL" />XXL
+                                    <input type="number" placeholder="Cantidad de XXL" id="XXL" min="0"
+                                        class="form-control" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div style=" height:auto; padding:1%;" class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div style="text-align:center;" class="form-group">
+                                    <h3>Imagen Producto</h3>
+                                    <label class="lbl_imagen" for="imgpro">
+                                        <span style="font-size:6rem;" class="icon-cloud-upload"></span>
+                                        <input style="display:none" name="imagen" id="imgpro" type="file">
+                                        <h4 id="name_img"></h4>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="text-align:center;" class="form-group">
+                                    <div class="preview">
+                                        <img id="blah" src="#" alt="your image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="Descripcion" placeholder="Descripción Producto"
+                                rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="btn_sub">
+                        <button type="submit" class="btn btn-main btn-large btn-round">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--- MARCAS -->
+<!--- MARCAS -->
+<div class="modal" id="marca_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Marca</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form_marca_nueva">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="marca_popup" placeholder="Nueva Marca">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+            <hr>
+            <div id="lista_result_marca">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--- END MARCAS -->
+<!--- END MARCAS -->
+
+<!--- CATEGORIAS  -->
+<!--- CATEGORIAS  -->
+<div class="modal" id="categoria_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Categoría</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form_marca_nueva">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="categoria_popup" placeholder="Nueva Categoría">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+            <hr>
+            <div id="lista_result_categorias">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--- END CATEGORIAS  -->
+<!--- EMD CATEGORIAS  -->
+
+<!--- Tipos  -->
+<!--- Tipos  -->
+<div class="modal" id="tipo_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Tipos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form_tipo_nueva">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="tipo_popup" placeholder="Nueva Tipo">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+            <hr>
+            <div id="lista_result_tipos">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--- EMD Tipos  -->
+<!---EMD Tipos  -->

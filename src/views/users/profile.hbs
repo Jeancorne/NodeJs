@@ -1,0 +1,55 @@
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+<script src="/chat/chat.js"></script>
+<script>
+    $(document).ready(function () {
+        getdates()
+    })
+
+    function getdates() {
+        var oe = "";
+        $.ajax({
+            url: '/pro',
+            type: 'post',
+            data: { oe: oe },
+            success: function (data) {
+                var as = data
+                var nameuser = as.datoJson.name
+                var emailuser = as.datoJson.email
+                var roleuser = as.datoJson.role
+                var iduser = as.datoJson.id
+                cargar_infochat(nameuser, emailuser, roleuser, iduser)
+
+    /*
+                $("#pep").on('click', function () {
+                    alert("qweqwewwwwwwwwwwwww")
+                    var val = $(this).data('value') // would be 5
+                })*/
+            }
+        })
+    }
+/*
+$(document).on("click", "#pep", function(){
+    alert("qweqwewwwwwwwwwwwww")
+    var val = $(this).data('value')
+    switchRoom(vañl)
+  function switchRoom(room){
+		socket.emit('switchRoom', room);
+	}
+});/*
+    $("#pep").on('click', function () {
+        alert("qweqwewwwwwwwwwwwww")
+        var val = $(this).data('value') // would be 5
+    })*/
+
+</script>
+<div style="float:left;width:100px;border-right:1px solid black;height:300px;padding:10px;overflow:scroll-y;">
+    <b>ROOMS</b>
+    <div id="rooms"></div>
+</div>
+<div style="float:left;width:300px;height:250px;overflow:scroll-y;padding:10px;">
+    <div id="conversation"><p>qweqwe</p></div>
+    <input id="data" style="width:200px;" />
+    <input type="button" id="datasend" value="send" />
+</div>

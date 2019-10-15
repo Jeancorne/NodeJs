@@ -1,0 +1,25 @@
+<div class="dropdown-menu cart-dropdown">
+    {{#each carr}}
+    <div class="media">
+        <a class="pull-left">
+            <img class="media-object" src="/images/Productos_img/{{this.id_producto.ImgPro}}" alt="image" />
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading"><a>{{ this.id_producto.NombrePro }}</a></h4>
+            <div class="cart-price">
+                <span>{{ this.id_producto.PrecioPro }}</span>
+                {{!--  <span>1250.00</span> --}}
+            </div>
+        </div>
+        <a class="remove" value="{{ this._id }}"><i class="tf-ion-close"></i></a>
+    </div>
+    {{/each}}
+    <div class="cart-summary">
+        <span>Total</span>
+        <span class="total-price">{{valortotal}}</span>
+    </div>
+    <ul class="text-center cart-buttons">
+        <li><a href="/index/carrito"  class="btn btn-small">Detalles</a></li>
+        <li><a class="btn btn-small btn-solid-border">Checkout</a></li>
+    </ul>
+</div>

@@ -1,0 +1,136 @@
+<head>
+    <script type="text/handlebars"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/javascript/Loggin/TodosProductos.js"></script>
+
+</head>
+
+<section class="products section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div id="put_panel_filtros">
+                    <h3>FILTROS</h3>
+                    <hr>
+                    <div id="accordion">
+                        <div class="accordion">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-body">
+                                        <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                                            Precio
+                                        </h3>
+                                        <input class="form-control" type="number" placeholder="Min." name="precio1">
+                                        <input class="form-control" type="number" placeholder="Max." name="precio1">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-body">
+                                        <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                                            Género
+                                        </h3>{{!--  checkboxTipo --}}
+                                        <div class="filtros_stor">
+                                            {{#each tipo}}
+                                            <input class="form-check-input checkboxTipo" id="{{ this._id }}"
+                                                name="checkboxx" type="checkbox" value="{{ this.Nombre_tipo }}">
+                                            <label class="form-check-label lblCheckMarca"
+                                                for="{{ this._id }}">{{ this.Nombre_tipo }}</label>
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-body">
+                                        <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                                            Marca
+                                        </h3>  {{!-- checkboxMarca   --}}
+                                        <div class="filtros_stor">
+                                            {{#each marca}}
+                                            <input class="form-check-input checkboxMarca" id="{{ this._id }}"
+                                                name="checkboxx" type="checkbox" value="{{ this.Nombre_marca }}">
+                                            <label class="form-check-label lblCheckMarca"
+                                                for="{{ this._id }}">{{ this.Nombre_marca }}</label>
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-body">
+                                        <h3 type="button" aria-expanded="true" aria-controls="collapseOne">
+                                            Categoria
+                                        </h3>
+                                        <div class="filtros_stor">
+                                            {{#each categorias}}
+                                            <input class="form-check-input checkboxCate" id="{{this._id}}"
+                                                name="checkboxx" type="checkbox" value="{{this.Nombre_categoria}}">
+                                            <label class="form-check-label lblCheckMarca"
+                                                for="{{this._id}}">{{this.Nombre_categoria}}</label>
+                                            {{/each}}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="filter_body">
+                                <button type="button" id="btn_filtro" class="btn btn-main">Filtrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div id="put_filter_productos">
+                        {{#each productos}}
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <span class="bage">Sale</span>
+                                    <img class="img-responsive" src="/images/Productos_img/{{this.ImgPro}}"
+                                        alt="product-img" />
+                                    <div class="preview-meta">
+                                        <ul>
+                                            <li>
+                                                <a href="/index/getSingle/{{ this._id }}">
+                                                    <i class="tf-ion-ios-search"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a><i class="tf-ion-ios-heart"></i></a>
+                                            </li>
+                                            <li>
+                                                <a><i class="tf-ion-android-cart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <h4><a href="#">{{ this.NombrePro }}</a></h4>
+                                    <p class="price">{{ this.precioPro }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <ul class="pagination">
+                        {{#each paginad}}
+
+                        <li class="page-item"><a class="page-link" href="/index/productos/{{ this}}">{{this}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

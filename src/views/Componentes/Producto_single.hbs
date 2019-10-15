@@ -1,0 +1,77 @@
+<section class="single-product">
+    <div class="container">
+        <div class="return_todo_producto">
+            <a href="/index/productos" class="btn btn-main">Volver</a>
+        </div>
+        <div class="row mt-20">
+            <div class="col-md-5">
+                <ul id="cantidad" style="margin: 0; background: #f3f3f3;">
+                    <li class="slider_single">
+                        <figure class="img_slider_single">
+                            <img src="/images/Productos_img/{{prod.ImgPro}}" alt="Alternate Text" />
+                        </figure>
+                    </li>
+                </ul>
+                <div>
+                    <div class="pagination">
+                        <ul id="item_paginador">
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <figcaption class="icon_left_single">
+                        <span class="icon-chevron-left left_slider"></span>
+                    </figcaption>
+                </div>
+                <div>
+                    <figcaption class="icon_right_single">
+                        <span class="icon-chevron-right right_slider"></span>
+                    </figcaption>
+                </div>
+            </div>           
+            <div class="col-md-7">
+                <div class="single-product-details">
+
+                    {{ prod.NombrePro }}
+
+                    <h4> Precio: $ {{ prod.PrecioPro }} </h4>
+                    <p class="product-description mt-20">
+                        {{ prod.DescripcionPro }}
+                    </p>
+                    <div class="product-size">
+                        <span>Tamaño:</span>
+                        <select class="form-control">
+                            {{#each talle}}
+                            <option value="{{ this.talla }}">{{ this.talla }}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="product-quantity">
+                        <span>Cantidad:</span>
+                        <div class="product-quantity-slider">
+                            <input id="product-quantity" type="number" min="0" max="50" value="0"
+                                name="product-quantity">
+                        </div>
+                    </div>
+                    <a value="{{ prod._id }}" class="btn btn-main mt-20 add_car_single">Add To Cart</a>
+                    <a href="cart.html" class="btn btn-main mt-20">Comprar </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="tabCommon mt-20">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#details" aria-expanded="true">Detalles</a></li>
+                    </ul>
+                    <div class="tab-content patternbg">
+                        <div id="details" class="tab-pane fade active in">
+                            <h4>Descripción del producto</h4>
+                            {{ prod.DescripcionPro }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
